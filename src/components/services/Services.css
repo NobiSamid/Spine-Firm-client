@@ -1,0 +1,21 @@
+.servicesmain {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.service-card {
+    -webkit-border-radius: 33px;
+    border-radius: 33px;
+    background: #ffefe0;
+    -webkit-box-shadow: 18px 18px 24px #8c837b,
+        -18px -18px 24px #ffffff;
+    box-shadow: 18px 18px 24px #8c837b,
+        -18px -18px 24px #ffffff;
+}
+
+.service-card-img {
+    height: 250px;
+    width: auto;
+}

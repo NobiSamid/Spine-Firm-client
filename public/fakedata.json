@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Chiropractic",
+    "detail": "Chiropractic is a pseudoscientific alternative medicine that is concerned with the diagnosis and treatment of mechanical disorders of the musculoskeletal system, especially the spine. Practitioners of chiropractic are called chiropractors.",
+    "address": "404 Marconi Place, Shaft, New Mexico, 4483",
+    "email": "munozstrickland@gracker.com",
+    "phone": "+1 (826) 432-2402",
+    "picture": "https://arisefamilychiropractic.com/wp-content/uploads/chiropractor.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Acupuncture",
+    "detail": "Acupuncture is a form of alternative medicine and a component of traditional Chinese medicine in which thin needles are inserted into the body. Acupuncture is a pseudoscience; the theories and practices of TCM are not based on scientific knowledge, and it has been characterized as quackery.",
+    "address": "596 Remsen Street, Dale, Utah, 9025",
+    "email": "munozstrickland@gracker.com",
+    "phone": "+1 (914) 555-2467",
+    "picture": "https://i.guim.co.uk/img/media/a3d22ba9b1fb737cfc01f8be9d9efa185c41ce12/0_0_5127_3076/master/5127.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=289575fc4f980ae7d7534b901d620f88"
+  },
+  {
+    "id": 3,
+    "title": "Acupressure",
+    "detail": "Acupressure, is an alternative medicine technique often used in conjunction with acupuncture. It is based on the concept of life energy which flows through meridians in the body.",
+    "address": "958 Rogers Avenue, Ebro, North Dakota, 1283",
+    "email": "munozstrickland@gracker.com",
+    "phone": "+1 (887) 432-3880",
+    "picture": "https://static1.bigstockphoto.com/2/1/1/large1500/112435493.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Paraffin Wax Bath",
+    "detail": "Wax therapy, which uses a bath of molten paraffin wax, is one of the most effective ways of applying heat to improve mobility by warming the connective tissues. Wax therapy is mainly used on your hands and is often used by hand therapists in a hospital setting along with an exercise programme.",
+    "address": "310 Nautilus Avenue, Canby, South Carolina, 2388",
+    "email": "munozstrickland@gracker.com",
+    "phone": "+1 (968) 541-3107",
+    "picture": "https://cdn-o.fishpond.com/0282/283/847/1384790261/original.jpeg"
+  },
+  {
+    "id": 5,
+    "title": "Chinese Medicine",
+    "detail": "Traditional Chinese medicine is a branch of traditional medicine in China. It has been described as fraught with pseudoscience, and the majority of its treatments as having no logical mechanism of action.",
+    "address": "184 Dewey Place, Orovada, Delaware, 788",
+    "email": "munozstrickland@gracker.com",
+    "phone": "+1 (904) 572-2096",
+    "picture": "https://images.chinahighlights.com/allpicture/2020/02/a85b1cd2578e48a8b46b6ef5_cut_800x500_61.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Ayurveda",
+    "detail": "Ayurveda is an alternative medicine system with historical roots in the Indian subcontinent. The theory and practice of Ayurveda is pseudoscientific. The Indian Medical Association describes Ayurvedic practitioners who claim to practice medicine as quacks.",
+    "address": "969 Plaza Street, Lopezo, Washington, 6832",
+    "email": "munozstrickland@gracker.com",
+    "phone": "+1 (866) 537-3892",
+    "picture": "https://images.indianexpress.com/2020/10/covid-16.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Nutrition Advice",
+    "detail": "Nutrition is the biochemical and physiological process by which an organism uses food to support its life. It includes ingestion, absorption, assimilation, biosynthesis, catabolism and excretion. The science that studies the physiological process of nutrition is called nutritional science.",
+    "address": "863 Varick Avenue, Bakersville, Arkansas, 6052",
+    "email": "munozstrickland@gracker.com",
+    "phone": "+1 (887) 549-2278",
+    "picture": "https://www.shortcourses.com.au/wp-content/uploads/Nutrition-courses-1.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Consultants",
+    "detail": "Sometimes it happens that you don't know what you need and what to do for your mental and phisical health.Don't worry we are here to help you.We provide every kind of consultant which satisfy your desire",
+    "address": "260 Manhattan Court, Taycheedah, Nevada, 1965",
+    "email": "munozstrickland@gracker.com",
+    "phone": "+1 (943) 403-2739",
+    "picture": "http://araken.biz/wp-content/uploads/2021/03/consulting.jpg"
+  }
+]
