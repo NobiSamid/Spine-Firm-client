@@ -15,6 +15,7 @@ import Services from './components/services/Services';
 import Blood from './components/blood/Blood';
 import Login from './authentication/Login';
 import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './privateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -32,15 +33,15 @@ function App() {
             <Route exact path="/services">
               <Services></Services>
             </Route>
-            <Route exact path="/services/:serviceKey">
+            <PrivateRoute exact path="/services/:serviceKey">
               <ServiceDetails></ServiceDetails>
-            </Route>
-            <Route path="/blood">
+            </PrivateRoute>
+            <PrivateRoute path="/blood">
               <Blood></Blood>
-            </Route>
-            <Route path="/shop">
+            </PrivateRoute>
+            <PrivateRoute path="/shop">
               <Shop></Shop>
-            </Route>
+            </PrivateRoute>
             <Route path="/about">
               <About></About>
             </Route>

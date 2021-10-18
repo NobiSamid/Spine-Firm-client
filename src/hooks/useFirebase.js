@@ -16,12 +16,13 @@ initializeAuthentication();
 
 const useFirebase = () =>{
     const auth = getAuth();
+    const googleProvider = new GoogleAuthProvider();
 
 
     const [user, setUser] = useState({});
     const [error, setError] = useState("");
 
-
+//////////////////////////// Authentication with Email and Password part  /////////////
     const handleUserRegister = (email, pass) =>{
         createUserWithEmailAndPassword(auth, email, pass)
         .then(result =>{
@@ -45,7 +46,22 @@ const useFirebase = () =>{
         })
     };
 
-    /////// Observe user state change
+
+
+////////////////////  Authentication with Google Popup
+    const handleGoogleLogin = () =>{
+        return signInWithPopup(auth, googleProvider)
+        // .then(result =>{
+        //     setUser(result.user);
+        //     setError("");
+        // })
+        // .catch(error =>{
+        //     setError(error.message)
+        // })
+    }
+
+
+    ////////////////////////////// Observe user state change for all authentication
     useEffect(()=>{
         const unSubscribed = onAuthStateChanged(auth, user =>{
             if(user){
@@ -58,6 +74,7 @@ const useFirebase = () =>{
         return () => unSubscribed;
     },[])
 
+    ///////////////// Log out for all authentication system
     const logOut = () =>{
         signOut(auth)
         .then(()=>{})
@@ -68,6 +85,7 @@ const useFirebase = () =>{
         error, 
         handleUserRegister,
         handleUserLogin,
+        handleGoogleLogin,
         logOut
     }
 }

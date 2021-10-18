@@ -42,9 +42,13 @@ const Navigation = () => {
                             :
                             <Nav.Link as={Link} className="txtnav" to="/login">Log-in</Nav.Link>
                         }
-                        <Navbar.Text>
-                            Signed in as: <a href="#login">{user.email}</a>
-                        </Navbar.Text>
+                        {
+                            user.email &&
+                            <Navbar.Text>
+                            Signed in as: <a href="#login">{user.displayName}</a>
+                            </Navbar.Text>
+                        }
+                        
                     </Nav>
                 </Navbar.Collapse>
             </Container>

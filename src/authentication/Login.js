@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useHistory, useLocation } from 'react-router';
 import useAuth from '../hooks/useAuth';
 
 const Login = () => {
 
-    const { user, error, handleUserRegister, handleUserLogin } = useAuth();
+    const { user, error, handleUserRegister, handleUserLogin, handleGoogleLogin } = useAuth();
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_uri = location.state?.from || '/home' ;
+    console.log("came from", redirect_uri);
     console.log(user, error)
 
     const [email, setEmail] = useState("");
@@ -31,6 +36,19 @@ const Login = () => {
     const toggleLogIn = e =>{
         setIsLogin(e.target.checked);
     }
+
+    const handleGoogleLoginRedirect = () =>{
+        handleGoogleLogin()
+        .then(result =>{
+            history.push(redirect_uri);
+            // setUser(result.user);
+            // setError("");
+        })
+        .catch(error =>{
+            console.log(error.message)
+        })
+    }
+
     return (
         <div>
             <Form>
@@ -58,7 +76,7 @@ const Login = () => {
                 <Button onClick={handleRegister} variant="secondary">Register</Button>
                 <Button onClick={handleLogin} variant="secondary">Log-In</Button>
             </Form><br/>
-            <Button variant="btn btn-secondary">Google Sign-in</Button>
+            <Button variant="btn btn-secondary" onClick={handleGoogleLoginRedirect} >Google Sign-in</Button>
         </div>
     );
 };
