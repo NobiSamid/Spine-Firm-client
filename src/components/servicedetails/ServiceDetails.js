@@ -17,7 +17,7 @@ const ServiceDetails = () => {
     return (
         <div>
             <h1>THis is service Details page of {serviceKey}</h1>
-            <img src={exactService[0]?.picture} alt="picture of detailed item"/>
+            <img src={exactService[0]?.picture} alt="picture-of-detailed-item" />
             <h2>Title:{exactService[0]?.title}</h2>
             <p>{exactService[0]?.detail}</p>
             <p>{exactService[0]?.address}</p>
