@@ -5,16 +5,21 @@ import useAuth from '../hooks/useAuth';
 
 const Login = () => {
 
-    const { user, error, handleUserRegister, handleUserLogin, handleGoogleLogin } = useAuth();
+    const { setUser, user, setError, error, setIsLoading, isLoading,  handleUserRegister, handleUserLogin, handleGoogleLogin, setUserName } = useAuth();
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home' ;
     console.log("came from", redirect_uri);
     console.log(user, error)
 
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
     const [isLogin, setIsLogin] = useState(false);
+
+    const handleNameChange = (e) =>{
+        setName(e.target.value);
+    }
 
     const handleEmailInput = (e) =>{
         setEmail(e.target.value);
@@ -25,9 +30,14 @@ const Login = () => {
     }
     console.log(email, pass)
 
-     const handleRegister = () => {
+    const handleRegister = () => {
         handleUserRegister(email, pass);
+        // setUserName(name);
     };
+
+    // const handleRegUserName = () =>{
+    //     setUserName(name);
+    // }
 
     const handleLogin = () => {
         handleUserLogin(email, pass);
@@ -41,19 +51,24 @@ const Login = () => {
         handleGoogleLogin()
         .then(result =>{
             history.push(redirect_uri);
-            // setUser(result.user);
-            // setError("");
+            setUser(result.user);
+            setError("");
         })
         .catch(error =>{
-            console.log(error.message)
+            setError(error.message)
         })
+        .finally(()=>setIsLoading(false));
     }
 
     return (
         <div>
             <Form>
-                {/* <h2> Please {isLogin ? "Log-in" : "Register"}</h2> */}
-                <h2> Please Login or Register</h2>
+                <h2> Please {isLogin ? "Log-in" : "Register"}</h2>
+                {!isLogin && <Form.Group className="mb-1" controlId="formGroupEmail">
+                        <Form.Label>User-Name</Form.Label>
+                        <Form.Control onBlur={handleNameChange} type="text" required placeholder="Enter Username" />
+                    </Form.Group> 
+                }
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control onBlur={handleEmailInput} type="email" placeholder="Enter email" />
@@ -70,11 +85,13 @@ const Login = () => {
                     <Form.Check onChange={toggleLogIn} type="checkbox" label="Already have an Account" />
                 </Form.Group>
                 {/* {isLogin && <Button size="sm" variant="link">Forgot Password</Button>} */}
-                {/* <Button variant="primary" type="submit">
-                    {isLogin ? "Log-in" : "Register"}
-                </Button> */}
-                <Button onClick={handleRegister} variant="secondary">Register</Button>
-                <Button onClick={handleLogin} variant="secondary">Log-In</Button>
+                {
+                    isLogin ? 
+                    <Button onClick={handleLogin} variant="secondary">Log-In</Button> : 
+                    <Button onClick={handleRegister} variant="secondary">Register</Button>
+                }
+                {/* <Button onClick={handleRegister} variant="secondary">Register</Button>
+                <Button onClick={handleLogin} variant="secondary">Log-In</Button> */}
             </Form><br/>
             <Button variant="btn btn-secondary" onClick={handleGoogleLoginRedirect} >Google Sign-in</Button>
         </div>

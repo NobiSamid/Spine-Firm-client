@@ -3,13 +3,14 @@ import {
   getAuth,
   signInWithPopup,
   GoogleAuthProvider,
-  GithubAuthProvider,
   onAuthStateChanged,
   signOut,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile
 } from "firebase/auth";
 import { useEffect, useState } from "react";
+import { useHistory, useLocation } from "react-router";
 
 
 initializeAuthentication();
@@ -21,6 +22,7 @@ const useFirebase = () =>{
 
     const [user, setUser] = useState({});
     const [error, setError] = useState("");
+    const [isLoading, setIsLoading] = useState(true);
 
 //////////////////////////// Authentication with Email and Password part  /////////////
     const handleUserRegister = (email, pass) =>{
@@ -29,10 +31,11 @@ const useFirebase = () =>{
             const user = result.user;
             console.log(user);
             setError('');
+            // setUserName();
         })
         .catch(error =>{
             setError(error.message);
-        })
+        });
     };
 
     const handleUserLogin = (email, pass) =>{
@@ -46,10 +49,18 @@ const useFirebase = () =>{
         })
     };
 
+    // const setUserName = (name) =>{
+    //     updateProfile(auth.currentUser, {displayName:{name}})
+    //     .then(() =>{
+        
+    //     })
+    // }
+
 
 
 ////////////////////  Authentication with Google Popup
     const handleGoogleLogin = () =>{
+        setIsLoading(true);
         return signInWithPopup(auth, googleProvider)
         // .then(result =>{
         //     setUser(result.user);
@@ -70,23 +81,31 @@ const useFirebase = () =>{
             else{
                 setUser({});
             }
+            setIsLoading(false);
         });
         return () => unSubscribed;
     },[])
 
     ///////////////// Log out for all authentication system
     const logOut = () =>{
+        setIsLoading(true);
         signOut(auth)
         .then(()=>{})
+        .finally(()=>setIsLoading(false));
     }
 
     return{
+        setUser,
         user,
+        setError,
         error, 
+        setIsLoading,
+        isLoading,
         handleUserRegister,
         handleUserLogin,
         handleGoogleLogin,
-        logOut
+        logOut,
+        // setUserName
     }
 }
 
