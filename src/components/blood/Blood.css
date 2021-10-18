@@ -1,0 +1,33 @@
+.top-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.top-card {
+    -webkit-border-radius: 85px;
+    border-radius: 85px;
+    background: #d44251;
+    -webkit-box-shadow: 9px 9px 42px #862a33,
+        -9px -9px 42px #ff5a6f;
+    box-shadow: 9px 9px 42px #862a33,
+        -9px -9px 42px #ff5a6f;
+}
+
+.services-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.service {
+    -webkit-border-radius: 33px;
+    border-radius: 33px;
+    background: #ffefe0;
+    -webkit-box-shadow: 18px 18px 24px #8c837b,
+        -18px -18px 24px #ffffff;
+    box-shadow: 18px 18px 24px #8c837b,
+        -18px -18px 24px #ffffff;
+}

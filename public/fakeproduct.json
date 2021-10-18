@@ -1,0 +1,58 @@
+[
+  {
+    "_id": "616dc9f4d7a6ca5d3401c88e",
+    "index": 0,
+    "picture": "https://m.media-amazon.com/images/I/81oBUzfqfkL._AC_SX425_.jpg",
+    "price": 90,
+    "name": "Acupressure Mat",
+    "registered": "2018-08-08T05:31:39 -06:00"
+  },
+  {
+    "_id": "616dc9f4381a2a6ba98ec273",
+    "index": 1,
+    "picture": "https://m.media-amazon.com/images/I/51xa4uXIABL._SY450_.jpg",
+    "price": 110,
+    "name": "Acupressure Set",
+    "registered": "2017-05-16T05:20:30 -06:00"
+  },
+  {
+    "_id": "616dc9f4b59d399522327dd3",
+    "index": 2,
+    "picture": "https://wp-images-soyummy.s3.amazonaws.com/wp-content/uploads/2019/10/07064735/iStock-939502594-1.jpg",
+    "price": 116,
+    "name": "Basic Chinese Madicine pack",
+    "registered": "2017-01-16T01:12:17 -06:00"
+  },
+  {
+    "_id": "616dc9f4b83bf1d5aba23872",
+    "index": 3,
+    "picture": "https://www.medgadget.com/wp-content/uploads/2019/10/Ayurvedic-Medicine.jpg",
+    "price": 117,
+    "name": "Ayurvedic Pack",
+    "registered": "2021-01-10T11:32:08 -06:00"
+  },
+  {
+    "_id": "616dc9f43f297bdf965440cf",
+    "index": 4,
+    "picture": "https://m.media-amazon.com/images/I/51XcOew04dL.jpg",
+    "price": 91,
+    "name": "Diabetic Test kit",
+    "registered": "2015-12-04T04:54:31 -06:00"
+  },
+  {
+    "_id": "616dc9f495926b34eb70aab6",
+    "index": 5,
+    "picture": "https://ichef.bbci.co.uk/news/976/cpsprodpb/1D4A/production/_116589470_gettyimages-1295458322.jpg",
+    "price": 82,
+    "name": "Oximeter",
+    "registered": "2014-05-04T01:16:43 -06:00"
+  },
+  {
+    "_id": "616dc9f44f9245543e9f1a87",
+    "index": 6,
+    "picture": "https://images.emedicinehealth.com/images/article/main_image/first-aid-kit.jpg",
+    "price": 102,
+    "name": "Fast aid kit",
+    "registered": "2015-01-23T02:36:29 -06:00"
+  }
+]
