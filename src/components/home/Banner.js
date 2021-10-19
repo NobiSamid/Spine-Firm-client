@@ -7,7 +7,7 @@ const Banner = () => {
             <Carousel fade variant="dark">
                 <Carousel.Item interval={2000}>
                     <img
-                    style={{height:"500px", width:"auto"}}
+                    style={{height:"25rem", width:"auto"}}
                     className="d-block w-100 height"
                     src=""
                     alt="First slide"
@@ -18,7 +18,7 @@ const Banner = () => {
                 </Carousel.Item>
                 <Carousel.Item interval={2000}>
                     <img
-                    style={{height:"500px", width:"auto"}}
+                    style={{height:"25rem", width:"auto"}}
                     className="d-block w-100 height"
                     src="https://www.acupuncturephysio.com/images/jch_optimize_backup_images/images_1600x1066_Atlas-Chinese-Medicine-Physiotherapy-Centre-Hong-Kong.jpg"
                     alt="Second slide"
@@ -29,7 +29,7 @@ const Banner = () => {
                 </Carousel.Item>
                 <Carousel.Item interval={2000}>
                     <img
-                    style={{height:"500px", width:"auto"}}
+                    style={{height:"25rem", width:"auto"}}
                     className="d-block w-100 height"
                     src="https://luxekurves.com/wp-content/uploads/2021/03/What-Is-Ayurvedic-Medicine.jpg"
                     alt="Third slide"

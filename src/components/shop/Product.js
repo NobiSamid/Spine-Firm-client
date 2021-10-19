@@ -5,7 +5,7 @@ import "./Shop.css"
 const Product = (props) => {
     const { name, picture, price, registered } = props.product || {};
     return (
-        <div>
+        <div className="product-card">
             <div>
                 <img src={picture} style={{height:"7rem", width:"auto"}} alt="product" />
             </div>

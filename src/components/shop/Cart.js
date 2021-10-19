@@ -8,7 +8,7 @@ const Cart = (props) => {
     const total = list.reduce(totalReducer, 0)
 
     return (
-        <div>
+        <div className="cart-card">
             <h2>Cart</h2>
             <h5>Item addee: {list.length}</h5>
             <h5>Total price: ${total}</h5>

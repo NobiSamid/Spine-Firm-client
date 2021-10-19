@@ -1,33 +1,40 @@
 .top-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
+    grid-column-gap: 1.875rem;
+    grid-row-gap: 1.875rem;
 }
 
 .top-card {
-    -webkit-border-radius: 85px;
-    border-radius: 85px;
-    background: #d44251;
-    -webkit-box-shadow: 9px 9px 42px #862a33,
-        -9px -9px 42px #ff5a6f;
-    box-shadow: 9px 9px 42px #862a33,
-        -9px -9px 42px #ff5a6f;
+    -webkit-border-radius: 1.3rem;
+    border-radius: 1.3rem;
+    background: #d0021b;
+    -webkit-box-shadow: .5rem .5rem 1rem #850111,
+        -.5rem -8px 1rem #ff0325;
+    box-shadow: .5rem .5rem 1rem #850111,
+        -.5rem -.5rem 1rem #ff0325;
 }
 
 .services-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
+    grid-column-gap: 1.875rem;
+    grid-row-gap: 1.875rem;
 }
 
 .service {
-    -webkit-border-radius: 33px;
-    border-radius: 33px;
-    background: #ffefe0;
-    -webkit-box-shadow: 18px 18px 24px #8c837b,
-        -18px -18px 24px #ffffff;
-    box-shadow: 18px 18px 24px #8c837b,
-        -18px -18px 24px #ffffff;
+    -webkit-border-radius: 3.125rem;
+    border-radius: 3.125rem;
+    background: #D1D8EC;
+    -webkit-box-shadow: 0.75rem 0.75rem 24px #b2b8c9,
+        -0.75rem -0.75rem 1.5rem #f0f8ff;
+    box-shadow: 0.75rem 0.75rem 1.5rem #b2b8c9,
+        -0.75rem -0.75rem 1.5rem #f0f8ff;
+}
+
+@media only screen and (max-width:688px) {
+    .blood-chart {
+        margin-left: -3rem;
+        padding-right: 3rem;
+    }
 }

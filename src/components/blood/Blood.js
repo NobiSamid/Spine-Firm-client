@@ -64,7 +64,7 @@ const Blood = () => {
                     <p>Save Lives</p>
                 </div>
             </div>
-            <div>
+            <div className="blood-chart">
                 <h1>Donation Graph</h1>
                 <LineChart
                     width={500}
