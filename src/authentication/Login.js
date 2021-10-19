@@ -79,6 +79,9 @@ const Login = () => {
     return (
         <div>
             <div className="login-page">
+                <div className="quote-div">
+                    <p className="quote">“Good health is not something we can buy. However, it can be an extremely valuable savings account.” <span> – Anne Wilson Schaef</span></p>
+                </div>
                 {/************************  Registration and Log in form ********************/}
                 <Form className="login-card">
 
@@ -104,6 +107,9 @@ const Login = () => {
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                         <Form.Check onChange={toggleLogIn} type="checkbox" label="Fill the Check-box if you Already have an Account to log-in" />
                     </Form.Group>
+                    <Form.Text className="warning-message" style={{color:"red"}}>
+                            {error}
+                    </Form.Text><br/>
                     {/* {isLogin && <Button size="sm" variant="link">Forgot Password</Button>} */}
                     {
                         isLogin ? 
@@ -112,9 +118,6 @@ const Login = () => {
                     }<br/>
                     <Button variant="btn btn-secondary gb" onClick={handleGoogleLoginRedirect} >Google Sign-in</Button>
                 </Form><br/>
-                <div className="quote-div">
-                    <p className="quote">“Good health is not something we can buy. However, it can be an extremely valuable savings account.” <span> – Anne Wilson Schaef</span></p>
-                </div>
             </div>
             
         </div>

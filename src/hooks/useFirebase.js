@@ -29,6 +29,18 @@ const useFirebase = () =>{
 
     // this function called from Login.js and passed two parameter email & pass and used for Registration
     const handleUserRegister = (email, pass) =>{
+        if(pass.length < 6){
+            setError('Password Must be at least 6 characters long')
+            return;
+        }
+        if(!/(?=.*[A-Z].*[A-Z])/.test(pass)){
+            setError('Password Must contain 2 upper case');
+            return;
+        }
+        if(!/(?=.*[0-9].*[0-9])/.test(pass)){
+            setError('Password Must contain 2 Integer');
+            return;
+        }
         createUserWithEmailAndPassword(auth, email, pass)
         .then(result =>{
             const user = result.user;
