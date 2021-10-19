@@ -1,6 +1,8 @@
 import React from 'react';
 import "./Footer.css";
 
+
+
 const Footer = () => {
     return (
         <div className="elements">
@@ -31,7 +33,7 @@ const Footer = () => {
                 <h6>Shop</h6>
             </div>
             <div className="element">
-                <h6>Face Book</h6>
+                <h6>Facebook</h6>
             </div>
             <div className="element">
                 <h6>App Store</h6>

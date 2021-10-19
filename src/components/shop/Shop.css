@@ -12,6 +12,7 @@
 }
 
 .product-card {
+    padding: 2rem 2rem 2rem 2rem;
     width: 80%;
     -webkit-border-radius: 16px;
     border-radius: 16px;
@@ -20,6 +21,12 @@
         -12px -12px 27px #eaf2ff;
     box-shadow: 12px 12px 27px #b8bed0,
         -12px -12px 27px #eaf2ff;
+}
+
+.product-card:hover img,
+.product-card:hover h3 {
+    transform: scale(1.2);
+    transition: transform 0.25s ease-in-out;
 }
 
 .cart {
