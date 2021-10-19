@@ -12,6 +12,7 @@ import {
 
 const Blood = () => {
 
+    ///////////////////// Blood Donation Chart Data
     const data = [
         {
             name: "January",
@@ -52,8 +53,8 @@ const Blood = () => {
 
     return (
         <div>
-            <h3>Drops that save Life</h3>
-            <h1 className="heading">Donate <span className="blood">Blood</span></h1>
+            {/********* Blod donation some data ********/}
+            <h1 className="heading">Donate <span className="blood">Blood</span></h1><br/>
             <div className="top-section">
                 <div className="top-card">
                     <h3>230</h3>
@@ -63,7 +64,9 @@ const Blood = () => {
                     <h3>20K</h3>
                     <p>Save Lives</p>
                 </div>
-            </div>
+            </div><br/>
+
+            {/************* Blood donation Chart **********/}
             <div className="blood-chart">
                 <h1>Donation Graph</h1>
                 <LineChart
@@ -89,7 +92,9 @@ const Blood = () => {
                         activeDot={{ r: 8 }}
                     />
                 </LineChart>
-            </div>
+            </div><br/>
+
+            {/******************** Services of this blood donation page **********/}
             <div className="services-section">
                 <div className="service">
                     <h5>Blood test</h5>

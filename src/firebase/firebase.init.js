@@ -6,3 +6,5 @@ const initializeAuthentication = () =>{
 }
 
 export default initializeAuthentication;
+
+// Firebase SDK calling

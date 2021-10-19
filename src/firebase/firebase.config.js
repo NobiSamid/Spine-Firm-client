@@ -8,3 +8,5 @@ const firebaseConfig = {
 };
 
 export default firebaseConfig;
+
+// firebase config SDK splitting 

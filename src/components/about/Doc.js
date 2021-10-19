@@ -2,6 +2,8 @@ import React from 'react';
 import "./About.css";
 
 const Doc = (props) => {
+
+    /////////////////// Destracturing data from props then using
     const {name, gender, registered, phone, email, address } = props.doc || {};
     return (
         <div className="doc-card">

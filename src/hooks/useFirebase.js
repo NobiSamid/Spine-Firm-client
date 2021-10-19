@@ -10,21 +10,24 @@ import {
   updateProfile
 } from "firebase/auth";
 import { useEffect, useState } from "react";
-import { useHistory, useLocation } from "react-router";
 
-
+////////////// Calling this function for getting Config data of firebase //////////
 initializeAuthentication();
 
 const useFirebase = () =>{
+
+    // Calling Auth and Provider function from firebase
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
-
+    // states for user , error and reloading the web page
     const [user, setUser] = useState({});
     const [error, setError] = useState("");
     const [isLoading, setIsLoading] = useState(true);
 
 //////////////////////////// Authentication with Email and Password part  /////////////
+
+    // this function called from Login.js and passed two parameter email & pass and used for Registration
     const handleUserRegister = (email, pass) =>{
         createUserWithEmailAndPassword(auth, email, pass)
         .then(result =>{
@@ -38,6 +41,7 @@ const useFirebase = () =>{
         });
     };
 
+    // called from Login.js passing two parameter email and pass for Login
     const handleUserLogin = (email, pass) =>{
         signInWithEmailAndPassword(auth, email, pass)
         .then(result =>{
@@ -49,6 +53,7 @@ const useFirebase = () =>{
         })
     };
 
+    // called from Login.js passing one parameter name for updating username but me failed.
     // const setUserName = (name) =>{
     //     updateProfile(auth.currentUser, {displayName:{name}})
     //     .then(() =>{
@@ -58,7 +63,7 @@ const useFirebase = () =>{
 
 
 
-////////////////////  Authentication with Google Popup
+////////////////////  Authentication with Google Popup ///////////////////
     const handleGoogleLogin = () =>{
         setIsLoading(true);
         return signInWithPopup(auth, googleProvider)
@@ -72,7 +77,7 @@ const useFirebase = () =>{
     }
 
 
-    ////////////////////////////// Observe user state change for all authentication
+    ////////////////////////////// Observe user state change for all authentication ///////////////
     useEffect(()=>{
         const unSubscribed = onAuthStateChanged(auth, user =>{
             if(user){
@@ -86,7 +91,7 @@ const useFirebase = () =>{
         return () => unSubscribed;
     },[])
 
-    ///////////////// Log out for all authentication system
+    ///////////////// Log out for all authentication system //////////////
     const logOut = () =>{
         setIsLoading(true);
         signOut(auth)
@@ -94,6 +99,7 @@ const useFirebase = () =>{
         .finally(()=>setIsLoading(false));
     }
 
+    // returning all function results
     return{
         setUser,
         user,

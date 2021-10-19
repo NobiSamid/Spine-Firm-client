@@ -7,13 +7,13 @@ const Footer = () => {
 
              {/************************* Footer Headings **********************/}
             <div className="element">
-                <h1>Company</h1>
+                <h1>Web</h1>
             </div>
             <div className="element">
                 <h1>Social</h1>
             </div>
             <div className="element">
-                <h1>Get the App</h1>
+                <h1>App</h1>
             </div>
 
             {/************************* Footer Elements **********************/}

@@ -5,6 +5,10 @@
     grid-row-gap: 1.875rem;
 }
 
+.blood {
+    color: #bb0a1e;
+}
+
 .top-card {
     -webkit-border-radius: 1.3rem;
     border-radius: 1.3rem;

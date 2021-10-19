@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Navigation = () => {
+
+    ////////////// Destracturing  user and logOut from useAuth hook
     const {user, logOut } = useAuth();
+
     return (
         <div>
              <Navbar bg="light" variant="light" sticky="top" expand="lg">
@@ -33,15 +36,16 @@ const Navigation = () => {
                         <Nav.Link as={Link} to="/about" >
                             About
                         </Nav.Link>
-                        {/* <Nav.Link as={Link} to="/login" >
-                            Log-in
-                        </Nav.Link> */}
+                        
+                        {/* If user Logged in or not then Display functionality by turnary operator */}
                         {
                             user?.email ?
                             <Button onClick={logOut} variant="light">Log-out</Button> 
                             :
                             <Nav.Link as={Link} className="txtnav" to="/login">Log-in</Nav.Link>
                         }
+
+                        {/* If user is Loging then show username or email */}
                         {
                             user.email &&
                             <Navbar.Text>

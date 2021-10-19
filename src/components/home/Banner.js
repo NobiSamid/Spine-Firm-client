@@ -9,7 +9,7 @@ const Banner = () => {
                     <img
                     style={{height:"25rem", width:"auto"}}
                     className="d-block w-100 height"
-                    src=""
+                    src="https://alea.care/static/0520738a37fac4b90dd8a9f1be4661e2/68341/Chinese_Medicine_2_77a96a3a49.png"
                     alt="First slide"
                     />
                     <Carousel.Caption>

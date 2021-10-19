@@ -1,12 +1,13 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 import './Services.css'
 
 const Service = (props) => {
+
+    //////// Reciving data from services as props then destructuring
     const {title, detail , picture, id} = props.service || {};
-    const history = useHistory();
+    // const history = useHistory();
     // const handleShowDetails = (serviceKey) =>{
     //     history.push(`/services/${serviceKey}`)
     // }

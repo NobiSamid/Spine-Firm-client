@@ -6,8 +6,11 @@ import { XAxis } from 'recharts/lib/cartesian/XAxis';
 import { YAxis } from 'recharts/lib/cartesian/YAxis';
 import { BarChart } from 'recharts/lib/chart/BarChart';
 import { Legend } from 'recharts/lib/component/Legend';
+import "./Home.css";
 
 const Chart = () => {
+
+    // ////////////Services Chart Data
     const data = [
   {
     name: "January",
@@ -46,8 +49,10 @@ const Chart = () => {
   }
 ];
     return (
-        <div>
+        <div className="service-chart">
         <h1>Services that provided through out the year</h1>
+
+        {/* Services Barchart */}
             <BarChart
                 width={500}
                 height={300}

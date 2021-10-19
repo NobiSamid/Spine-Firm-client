@@ -1,0 +1,21 @@
+.login-card {
+    width: 30rem;
+    padding: 3rem 3rem 3rem 3rem;
+    margin-left: 10rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    -webkit-border-radius: 16px;
+    border-radius: 16px;
+    background: #D1D8EC;
+    -webkit-box-shadow: 12px 12px 27px #b8bed0,
+        -12px -12px 27px #eaf2ff;
+    box-shadow: 12px 12px 27px #b8bed0,
+        -12px -12px 27px #eaf2ff;
+}
+
+@media only screen and (max-width:688px) {
+    .login-card {
+        width: 20rem;
+        margin-left: 1rem;
+    }
+}

@@ -5,17 +5,18 @@ import "./Shop.css"
 
 const Shop = () => {
 
+    //  Products and list setting in a state
     const [products, setProducts] = useState([]);
     const [list, setList] = useState([]);
 
+    //Feching data from fake data by using useEffect
     useEffect(()=>{
         fetch('./fakeproduct.json')
         .then(res=>res.json())
         .then(data=>setProducts(data));
     },[])
 
-    console.log(products);
-
+    ////// Button handler for buy product
     const handleAddProduct = (product) =>{
         const productList = [...list, product];
         setList(productList);
@@ -23,6 +24,8 @@ const Shop = () => {
 
     return (
         <div>
+
+            {/* Product component */}
             <h1>Buy your desired goods here</h1>
             <div className="main-shop">
                 <div className="item">
@@ -34,6 +37,8 @@ const Shop = () => {
                         ></Product>)
                     }
                 </div>
+
+                {/* Product Cart component */}
                 <div className="cart">
                     <Cart list={list}></Cart>
                 </div>

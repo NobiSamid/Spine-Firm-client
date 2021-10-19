@@ -20,8 +20,10 @@ import PrivateRoute from './privateRoute/PrivateRoute';
 function App() {
   return (
     <div className="App">
+      {/*********  This AuthProvider below is for making useFirebase global as useAuth ******/}
       <AuthProvider>
         <Router>
+          {/* Putting Navigation out side of the switch to provide every component . But I want that notFound page doesn't have it and I dont know how to do it  */}
           <Navigation></Navigation>
           <Switch>
             <Route exact path="/">
@@ -33,6 +35,7 @@ function App() {
             <Route exact path="/services">
               <Services></Services>
             </Route>
+            {/* Wrapping up components with PrivateRoute. If user tried to access without logging in he or she cann't ha ha ha */}
             <PrivateRoute exact path="/services/:serviceKey">
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>
@@ -52,6 +55,7 @@ function App() {
               <Notfound></Notfound>
             </Route>
           </Switch>
+          {/* Putting Footer out side of the switch to provide every component . But I want that notFound page doesn't have it and I dont know how to do it  */}
           <Footer></Footer>
         </Router>
       </AuthProvider>

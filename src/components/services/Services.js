@@ -3,13 +3,16 @@ import Service from './Service';
 import "./Services.css"
 
 const Services = () => {
-        const [services, setServices] = useState([]);
-        useEffect(()=>{
-            fetch('/fakedata.json')
-            .then(res=>res.json())
-            .then(data=>setServices(data))
-        },[]);
-        
+
+    ///////// Fetching services data with useEffect then setting it in a State
+    const [services, setServices] = useState([]);
+
+    useEffect(()=>{
+        fetch('/fakedata.json')
+        .then(res=>res.json())
+        .then(data=>setServices(data))
+    },[]);
+
     return (
         <div className="servicesmain">
             {

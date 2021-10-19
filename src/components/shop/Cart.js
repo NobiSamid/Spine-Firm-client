@@ -2,8 +2,11 @@ import React from 'react';
 import "./Shop.css"
 
 const Cart = (props) => {
+
+    /// Destructuring new product array
     const {list} = (props) || {};
 
+    /////// Calculating total product by Reduce function
     const totalReducer = (prevValue, currentValue) => prevValue + currentValue.price
     const total = list.reduce(totalReducer, 0)
 

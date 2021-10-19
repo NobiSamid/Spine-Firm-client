@@ -1,0 +1,6 @@
+@media only screen and (max-width:688px) {
+    .service-chart {
+        margin-left: -3rem;
+        padding-right: 3rem;
+    }
+}

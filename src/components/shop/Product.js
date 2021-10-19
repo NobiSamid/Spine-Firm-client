@@ -3,6 +3,8 @@ import { Button } from 'react-bootstrap';
 import "./Shop.css"
 
 const Product = (props) => {
+
+    // getting data from shop by Props and destructure
     const { name, picture, price, registered } = props.product || {};
     return (
         <div className="product-card">
