@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import "./Navigation.css"
 
 const Navigation = () => {
 
@@ -21,34 +22,34 @@ const Navigation = () => {
                     navbarScroll
                     >
                     {/************************* Router Links **********************/}
-                        <Nav.Link as={Link} to="/home">
+                        <Nav.Link className="navtxt" as={Link} to="/home">
                             Home
                         </Nav.Link>
-                        <Nav.Link as={Link} to="/services">
+                        <Nav.Link className="navtxt" as={Link} to="/services">
                             Services
                         </Nav.Link>
-                        <Nav.Link as={Link} to="/blood">
+                        <Nav.Link className="navtxt" as={Link} to="/blood">
                             Blood
                         </Nav.Link>
-                        <Nav.Link as={Link} to="/shop" >
+                        <Nav.Link className="navtxt" as={Link} to="/shop" >
                             Shop-now
                         </Nav.Link>
-                        <Nav.Link as={Link} to="/about" >
+                        <Nav.Link className="navtxt" as={Link} to="/about" >
                             About
                         </Nav.Link>
                         
                         {/* If user Logged in or not then Display functionality by turnary operator */}
                         {
                             user?.email ?
-                            <Button onClick={logOut} variant="light">Log-out</Button> 
+                            <Button className="navtxt" onClick={logOut} variant="light">Log-out</Button> 
                             :
-                            <Nav.Link as={Link} className="txtnav" to="/login">Log-in</Nav.Link>
+                            <Nav.Link  as={Link} className="txtnav" to="/login">Log-in</Nav.Link>
                         }
 
                         {/* If user is Loging then show username or email */}
                         {
                             user.email &&
-                            <Navbar.Text>
+                            <Navbar.Text className="navtxt">
                             Signed in as: <a href="#login">{user.displayName ? user.displayName : user.email }</a>
                             </Navbar.Text>
                         }

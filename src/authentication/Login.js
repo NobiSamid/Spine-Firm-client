@@ -78,10 +78,10 @@ const Login = () => {
 
     return (
         <div>
-            <div className="login-card">
+            <div className="login-page">
                 {/************************  Registration and Log in form ********************/}
-                <Form>
-                
+                <Form className="login-card">
+
                         {/*******  Useing ternary operator for changing between Register and Log in page  ********/}
                     <h2> Please {isLogin ? "Log-in" : "Register"}</h2>
                     {!isLogin && <Form.Group className="mb-1" controlId="formGroupEmail">
@@ -109,9 +109,12 @@ const Login = () => {
                         isLogin ? 
                         <Button onClick={handleLogin} variant="secondary">Log-In</Button> : 
                         <Button onClick={handleRegister} variant="secondary">Register</Button>
-                    }
+                    }<br/>
+                    <Button variant="btn btn-secondary gb" onClick={handleGoogleLoginRedirect} >Google Sign-in</Button>
                 </Form><br/>
-                <Button variant="btn btn-secondary" onClick={handleGoogleLoginRedirect} >Google Sign-in</Button>
+                <div className="quote-div">
+                    <p className="quote">“Good health is not something we can buy. However, it can be an extremely valuable savings account.” <span> – Anne Wilson Schaef</span></p>
+                </div>
             </div>
             
         </div>

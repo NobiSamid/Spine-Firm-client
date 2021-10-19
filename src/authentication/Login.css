@@ -1,5 +1,27 @@
+.login-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-div {
+    padding: 3rem 3rem 3rem 3rem;
+}
+
+.quote {
+    font-size: larger;
+    font-weight: 800;
+    word-wrap: normal;
+}
+
+.quote span {
+    font-size: medium;
+    font-weight: 500;
+}
+
 .login-card {
-    width: 30rem;
+    width: 50%;
     padding: 3rem 3rem 3rem 3rem;
     margin-left: 10rem;
     margin-top: 3rem;
@@ -13,9 +35,18 @@
         -12px -12px 27px #eaf2ff;
 }
 
+.gb {
+    margin-top: 1rem;
+}
+
 @media only screen and (max-width:688px) {
     .login-card {
         width: 20rem;
         margin-left: 1rem;
+    }
+
+    .login-page {
+        display: flex;
+        flex-direction: column;
     }
 }
