@@ -1,0 +1,16 @@
+.details {
+    padding: 3rem 5rem 3rem 5rem;
+    -webkit-border-radius: 3.125rem;
+    border-radius: 3.125rem;
+    background: #D1D8EC;
+    -webkit-box-shadow: 0.75rem 0.75rem 24px #b2b8c9,
+        -0.75rem -0.75rem 1.5rem #f0f8ff;
+    box-shadow: 0.75rem 0.75rem 1.5rem #b2b8c9,
+        -0.75rem -0.75rem 1.5rem #f0f8ff;
+}
+
+.details img {
+    width: 20rem;
+    height: auto;
+    border-radius: 2rem;
+}

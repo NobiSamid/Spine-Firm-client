@@ -14,37 +14,37 @@ const Chart = () => {
     const data = [
   {
     name: "January",
-    uv: 4000,
+    Service: 4000,
     amt: 2400
   },
   {
     name: "Feb",
-    uv: 2780,
+    Service: 2780,
     amt: 2000
   },
   {
     name: "March",
-    uv: 6000,
+    Service: 6000,
     amt: 2290
   },
   {
     name: "April",
-    uv: 4000,
+    Service: 4000,
     amt: 2000
   },
   {
     name: "May",
-    uv: 3000,
+    Service: 3000,
     amt: 2181
   },
   {
     name: "June",
-    uv: 3390,
+    Service: 3390,
     amt: 2500
   },
   {
     name: "July",
-    uv: 3490,
+    Service: 3490,
     amt: 2100
   }
 ];
@@ -53,7 +53,7 @@ const Chart = () => {
         <h1>Services that provided through out the year</h1>
 
         {/* Services Barchart */}
-            <BarChart
+            <BarChart className="chart-main"
                 width={500}
                 height={300}
                 data={data}
@@ -69,7 +69,7 @@ const Chart = () => {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="uv" fill="#82ca9d" />
+                <Bar dataKey="Service" fill="#82ca9d" />
             </BarChart>
             
         </div>

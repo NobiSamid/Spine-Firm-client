@@ -13,7 +13,7 @@ const Home = () => {
             </div>
 
             {/* Services that provided via thi website chart with ReChart */}
-            <div>
+            <div className="home-chart">
                 <Chart></Chart>
             </div>
 
@@ -23,7 +23,7 @@ const Home = () => {
             </div>
 
             {/* FAQ section by using React Accordion  */}
-            <div>
+            <div className="faq">
                 <h2>Friquently Asked Question</h2>
                 <Accordion defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
@@ -33,15 +33,21 @@ const Home = () => {
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="1">
-                        <Accordion.Header>Question 2</Accordion.Header>
+                        <Accordion.Header>Do acupuncture needles pierce the skin?</Accordion.Header>
                         <Accordion.Body>
-                            something 2
+                            They're hollow and so slender that you may not even feel them when the practitioner puts them into your skin.
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="2">
-                        <Accordion.Header>Question 3</Accordion.Header>
+                        <Accordion.Header>Is paraffin wax bath good for arthritis?</Accordion.Header>
                         <Accordion.Body>
-                            something 3
+                            Heat treatments like paraffin wax baths can be enormously helpful for relieving the joint pain and stiffness of arthritis.
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="3">
+                        <Accordion.Header>How much do Chinese herbs cost?</Accordion.Header>
+                        <Accordion.Body>
+                           A month's supply of herbs cost between $30 and $50
                         </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>

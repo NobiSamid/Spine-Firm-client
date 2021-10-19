@@ -1,6 +1,7 @@
 .main-shop {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    padding: 3rem .5rem 3rem 2rem;
 }
 
 .item {
@@ -11,7 +12,7 @@
 }
 
 .product-card {
-    width: 20rem;
+    width: 80%;
     -webkit-border-radius: 16px;
     border-radius: 16px;
     background: #D1D8EC;
@@ -19,6 +20,10 @@
         -12px -12px 27px #eaf2ff;
     box-shadow: 12px 12px 27px #b8bed0,
         -12px -12px 27px #eaf2ff;
+}
+
+.cart {
+    margin-right: 3rem;
 }
 
 .cart-card {

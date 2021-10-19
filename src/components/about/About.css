@@ -1,4 +1,11 @@
+.about-details {
+    padding: 3rem 3rem 3rem 3rem;
+}
+
 .doc-list {
+    margin-left: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 2rem;
@@ -6,7 +13,8 @@
 }
 
 .doc-card {
-    width: 20rem;
+    width: 80%;
+    padding: 1rem 1rem 1rem 1rem;
     -webkit-border-radius: 16px;
     border-radius: 16px;
     background: #D1D8EC;

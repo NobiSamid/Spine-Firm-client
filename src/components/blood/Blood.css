@@ -1,5 +1,7 @@
 .top-section {
-    display: grid;
+    margin: auto;
+    padding-left: 3rem;
+    display: flex;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 1.875rem;
     grid-row-gap: 1.875rem;
@@ -9,10 +11,15 @@
     color: #bb0a1e;
 }
 
+.blood-chart {
+    margin-top: 3rem;
+}
+
 .top-card {
+    width: 50%;
     -webkit-border-radius: 1.3rem;
     border-radius: 1.3rem;
-    background: #d0021b;
+    background: #e7d9d9;
     -webkit-box-shadow: .5rem .5rem 1rem #850111,
         -.5rem -8px 1rem #ff0325;
     box-shadow: .5rem .5rem 1rem #850111,
@@ -20,13 +27,17 @@
 }
 
 .services-section {
+    padding-left: 15rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 1.875rem;
     grid-row-gap: 1.875rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .service {
+    width: 50%;
     -webkit-border-radius: 3.125rem;
     border-radius: 3.125rem;
     background: #D1D8EC;
@@ -36,9 +47,17 @@
         -0.75rem -0.75rem 1.5rem #f0f8ff;
 }
 
+.blood-chart-main {
+    margin: auto;
+}
+
 @media only screen and (max-width:688px) {
     .blood-chart {
         margin-left: -3rem;
         padding-right: 3rem;
+    }
+
+    .services-section {
+        padding-left: 3rem;
     }
 }

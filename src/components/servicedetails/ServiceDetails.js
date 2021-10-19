@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
+import "./ServiceDetails.css";
 
 const ServiceDetails = () => {
 
@@ -20,14 +21,15 @@ const ServiceDetails = () => {
     // console.log(exactService)
 
     return (
-        <div>
-            <h1>THis is service Details page of {serviceKey}</h1>
+        <div className="details">
+            <h1>Showing {serviceKey} number service component details</h1>
             <img src={exactService[0]?.picture} alt="detailed-item" />
-            <h2>Title:{exactService[0]?.title}</h2>
+            <h2>{exactService[0]?.title}</h2>
             <p>{exactService[0]?.detail}</p>
-            <p>{exactService[0]?.address}</p>
-            <p>{exactService[0]?.email}</p>
-            <p>{exactService[0]?.phone}</p>
+            <p>Treatment address: {exactService[0]?.address}</p>
+            <h6>Contact here for appoinment</h6>
+            <p>Email: {exactService[0]?.email}</p>
+            <p>Phone: {exactService[0]?.phone}</p>
         </div>
     );
 };

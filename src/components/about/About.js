@@ -18,7 +18,7 @@ const About = () => {
     return (
         <div>
             {/***********  About us ************/}
-            <div>
+            <div className="about-details">
                 <h2>About us</h2>
                 <p>
                     Many cultures in ancient times treated illnesses with magic and herbal remedies. People believed that the supernatural powers of a shaman (sha-man), also known as a medicine man or witch doctor, healed the sick. Ancient Egyptians thought that their gods healed them. They also treated illnesses with herbal medicines and performed surgeries with metal instruments. Historians believe that Egyptians learned how diseases affected the human body when they performed burial rituals. When people died, they prepared them for the afterlife in a process called mummification. Before the body was wrapped in cloths, they removed organs and placed them in clay jars for preservation.<br/>
