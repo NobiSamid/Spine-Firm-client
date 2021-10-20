@@ -19,6 +19,14 @@
     align-items: center;
 }
 
+.credit {
+    background-color: black;
+}
+
+.credit span {
+    color: wheat;
+}
+
 /* @media only screen and (max-width:688px) {
     .elements {
         display: grid;

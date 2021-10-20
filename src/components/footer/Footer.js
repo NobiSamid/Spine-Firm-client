@@ -1,6 +1,9 @@
 import React from 'react';
 import "./Footer.css";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingBasket, faBlog,faPhone, faRegistered} from '@fortawesome/free-solid-svg-icons';
+import { faYoutubeSquare, faFacebookSquare, faGooglePlay, faAppStore, faMicrosoft, faInstagramSquare } from '@fortawesome/free-brands-svg-icons';
+ 
 
 
 const Footer = () => {
@@ -21,35 +24,35 @@ const Footer = () => {
 
             {/************************* Footer Elements **********************/}
                 <div className="element">
-                    <h6>Contact us</h6>
+                    <h1><FontAwesomeIcon icon={faPhone}></FontAwesomeIcon></h1>
                 </div>
                 <div className="element">
-                    <h6>Instagram</h6>
+                    <h1><FontAwesomeIcon icon={faYoutubeSquare}></FontAwesomeIcon></h1>
                 </div>
                 <div className="element">
-                    <h6>Google Play</h6>
+                    <h1><FontAwesomeIcon icon={faGooglePlay}></FontAwesomeIcon></h1>
                 </div>
                 
                 <div  className="element">
-                    <h6>Shop</h6>
+                    <h1><FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon></h1>
                 </div>
                 <div className="element">
-                    <h6>Facebook</h6>
+                    <h1><FontAwesomeIcon icon={faFacebookSquare}></FontAwesomeIcon></h1>
                 </div>
                 <div className="element">
-                    <h6>App Store</h6>
+                    <h1><FontAwesomeIcon icon={faAppStore}></FontAwesomeIcon></h1>
                 </div>
                 <div className="element">
-                    <h6>Blog</h6>
+                    <h1><FontAwesomeIcon icon={faBlog}></FontAwesomeIcon></h1>
                 </div>
                 <div className="element">
-                    <h6>Instagram</h6>
+                    <h1><FontAwesomeIcon icon={faInstagramSquare}></FontAwesomeIcon></h1>
                 </div>
                 <div className="element">
-                    <h6>Microsoft Store</h6>
+                    <h1><FontAwesomeIcon icon={faMicrosoft}></FontAwesomeIcon></h1>
                 </div>
             </div>
-            <div><span>Developed by Khoundokar Sami un nobi Samid</span></div>
+            <div className='credit'><span>Developed by Khoundokar Sami un nobi Samid <FontAwesomeIcon icon={faRegistered}></FontAwesomeIcon></span></div>
         </div>
         
     );

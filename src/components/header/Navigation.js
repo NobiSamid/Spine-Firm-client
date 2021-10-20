@@ -3,6 +3,8 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import "./Navigation.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Navigation = () => {
 
@@ -50,7 +52,7 @@ const Navigation = () => {
                         {
                             user.email &&
                             <Navbar.Text className="navtxt">
-                            Signed in as: <a href="#login">{user.displayName ? user.displayName : user.email }</a>
+                             <FontAwesomeIcon icon={faUser}></FontAwesomeIcon> <a href="#login">{user.displayName ? user.displayName : user.email }</a>
                             </Navbar.Text>
                         }
                         

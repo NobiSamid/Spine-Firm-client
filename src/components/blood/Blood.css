@@ -37,6 +37,7 @@
 }
 
 .service {
+    padding-left: 2rem 2rem 2rem 2rem;
     width: 50%;
     -webkit-border-radius: 3.125rem;
     border-radius: 3.125rem;

@@ -1,5 +1,7 @@
 import React from 'react';
 import "./Shop.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Cart = (props) => {
 
@@ -12,9 +14,9 @@ const Cart = (props) => {
 
     return (
         <div className="cart-card">
-            <h2>Cart</h2>
+            <h2>Cart <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></h2>
             <h5>Item addee: {list.length}</h5>
-            <h5>Total price: ${total}</h5>
+            <h5>Total price: ${total}</h5><br/>
             <ul>
                 {
                     list.map(product =><li key={product.name}>{product.name}</li>)

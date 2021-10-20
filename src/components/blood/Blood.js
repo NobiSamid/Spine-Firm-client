@@ -9,6 +9,8 @@ import {
   Tooltip,
   Legend
 } from "recharts";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faVial, faTint, faBell, faClinicMedical, faUserCog } from '@fortawesome/free-solid-svg-icons';
 
 const Blood = () => {
 
@@ -54,7 +56,7 @@ const Blood = () => {
     return (
         <div>
             {/********* Blod donation some data ********/}
-            <h1 className="heading">Donate <span className="blood">Blood</span></h1><br/>
+            <h1 className="heading">Donate <span className="blood">Blood</span> <FontAwesomeIcon style={{color:"#bb0a1e"}} icon={faTint}></FontAwesomeIcon></h1><br/>
             <div className="top-section">
                 <div className="top-card">
                     <h3>230</h3>
@@ -98,18 +100,22 @@ const Blood = () => {
             {/******************** Services of this blood donation page **********/}
             <div className="services-section">
                 <div className="service">
+                    <h1><FontAwesomeIcon icon={faVial}></FontAwesomeIcon></h1>
                     <h5>Blood test</h5>
                     <p>12K</p>
                 </div>
                 <div className="service">
+                    <h1><FontAwesomeIcon icon={faBell}></FontAwesomeIcon></h1>
                     <h5>Blood Request</h5>
                     <p>30K</p>
                 </div>
                 <div className="service">
+                    <h1><FontAwesomeIcon icon={faClinicMedical}></FontAwesomeIcon></h1>
                     <h5>Blood Bank</h5>
                     <p>Map</p>
                 </div>
                 <div className="service">
+                    <h1><FontAwesomeIcon icon={faUserCog}></FontAwesomeIcon></h1>
                     <h5>Other</h5>
                     <p>More</p>
                 </div>
