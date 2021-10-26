@@ -16,6 +16,9 @@ import Blood from './components/blood/Blood';
 import Login from './authentication/Login';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './privateRoute/PrivateRoute';
+// import OrderReview from './components/shop/orderReview/OrderReview';
+import ReviewItem from './components/shop/orderReview/ReviewItem';
+import OrderReview from './components/shop/orderReview/OrderReview';
 
 function App() {
   return (
@@ -47,6 +50,9 @@ function App() {
             </PrivateRoute>
             <Route path="/about">
               <About></About>
+            </Route>
+            <Route path="/review">
+              <OrderReview></OrderReview>
             </Route>
             <Route path="/login">
               <Login></Login>

@@ -16,7 +16,7 @@ const About = () => {
     },[])
 
     return (
-        <div>
+        <div className='about-page'>
             {/***********  About us ************/}
             <div className="about-details">
                 <h2>About us</h2>

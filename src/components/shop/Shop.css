@@ -42,7 +42,18 @@
     box-shadow: 5px 5px 9px #54565e,
         -5px -5px 9px #ffffff;
 }
-
+.pagination{
+    margin: auto;
+}
+.pagination button{
+    margin-right: 20px;
+    color: whitesmoke;
+    background-color: gray;
+    padding: 5px 15px;
+}
+.pagination .selected{
+    background-color: black;
+}
 @media only screen and (max-width:688px) {
     .item {
         display: grid;

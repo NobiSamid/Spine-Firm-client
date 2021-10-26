@@ -5,16 +5,17 @@ import "./Shop.css"
 const Product = (props) => {
 
     // getting data from shop by Props and destructure
-    const { name, picture, price, registered } = props.product || {};
+    const { name, picture, img, price, registered, category, stock } = props.product || {};
     return (
         <div className="product-card">
             <div>
-                <img src={picture} style={{height:"7rem", width:"auto"}} alt="product" />
+                <img src={img} style={{height:"7rem", width:"auto"}} alt="product" />
             </div>
             <div>
                 <h3>{name}</h3>
+                <p>{category}</p>
                 <p>{price}$</p>
-                <small>{registered}R</small><br/>
+                <small>{stock}</small><br/>
                 <Button variant="secondary" onClick={()=>props.handleAddProduct(props.product)}>Buy now</Button>
             </div>
         </div>
